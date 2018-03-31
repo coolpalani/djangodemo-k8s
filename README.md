@@ -7,10 +7,12 @@ Clone this repo.  I haven't pushed the Django image up to Docker Cloud yet, you'
 
 1) Clone: `git clone https://github.com/jayps/djangodemo-k8s.git`  
 2) Build djangodemo: `docker build -t djangodemo:v2.5 .`  
-3) Create deployment for djangodemo app: `kubectl create -f djangodemo-deployment.yaml`  
-4) Create service for djangodemo app: `kubectl create -f djangodemo-service.yaml`  
+3) Create storage for the db: `kubectl create -f djangodemodb-storage.yaml`
+4) Create storage claim for the db: `kubectl create -f djangodemodb-storage-claim.yaml`
 5) Create deployment for djangodemo db: `kubectl create -f djangodemo-db-deployment.yaml`  
 6) Create service for djangodemo db: `kubectl create -f djangodemo-db-service.yaml`  
+7) Create deployment for djangodemo app: `kubectl create -f djangodemo-deployment.yaml`  
+8) Create service for djangodemo app: `kubectl create -f djangodemo-service.yaml` 
 
 If you're running Minikube, you can then run `minikube service djangodemo-service` to open the service in your browser.  No authentication is required.  
 

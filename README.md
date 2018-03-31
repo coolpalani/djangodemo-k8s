@@ -18,7 +18,10 @@ If you're running Minikube, you can then run `minikube service djangodemo-servic
 Run `kubectl get pods` to view pods for what is running.  Similarly, run `kubectl get services` to see what services are actively running (what's exposed).  
 
 ### Basic API
-You can go to `http://serviceurl/quotes` to view quotes.  On that page, you'll find a form that lets you POST new quotes as well.  
+You can go to `http://serviceurl/quotes` to view quotes.  On that page, you'll find a form that lets you POST new quotes as well. 
+
+## Viewing logs with Minikube
+After running `kubectl get pods`, you'll see something like `djangodemo-deployment-6b6bcc54f7-wb5nz`.  To view logs for that pod, run `minikube logs -f djangodemo-deployment-6b6bcc54f7-wb5nz`.  
 
 ## TODO
 I still need to properly expose the djangodemo-service service so that it can be accessed via something like http://localhost/ or http://yoururl.

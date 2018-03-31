@@ -24,4 +24,5 @@ You can go to `http://serviceurl/quotes` to view quotes.  On that page, you'll f
 After running `kubectl get pods`, you'll see something like `djangodemo-deployment-6b6bcc54f7-wb5nz`.  To view logs for that pod, run `minikube logs -f djangodemo-deployment-6b6bcc54f7-wb5nz`.  
 
 ## TODO
-I still need to properly expose the djangodemo-service service so that it can be accessed via something like http://localhost/ or http://yoururl.
+1) I still need to properly expose the djangodemo-service service so that it can be accessed via something like http://localhost/ or http://yoururl.  
+2) I need to figure out how exactly the mounted storage volume works so that I can run backups or transport the storage around without losing data.  Can't currently figure out where it's putting the files for db-data.
